@@ -57,7 +57,7 @@ syntax on
 filetype plugin indent on
 
 set wildmenu
-
+set relativenumber
 set mouse=a
 
 " Problem 1:
@@ -66,6 +66,18 @@ set mouse=a
 " which solves most of the problems
 
 set tags=tags
+
+" ALE Configuration
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+let g:ale_virtualtext_cursor = 'disabled'  " Disable virtual text
+let g:ale_set_highlights = 0  " Disable default error highlighting
+
+" Custom ALE highlighting
+highlight ALEErrorSign ctermfg=Red ctermbg=NONE
+highlight ALEWarningSign ctermfg=Yellow ctermbg=NONE
+highlight ALEError cterm=underline ctermfg=NONE ctermbg=NONE
+highlight ALEWarning cterm=underline ctermfg=NONE ctermbg=NONE
 
 " Vim plugin manager
 " vim-plug: https://github.com/junegunn/vim-plugcall plug#begin()
@@ -82,5 +94,3 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'dense-analysis/ale'
 
 call plug#end()
-
-

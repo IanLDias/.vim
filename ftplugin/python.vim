@@ -28,6 +28,9 @@ let b:ale_linters = ['ruff']
 " Use Ruff for fixing as well
 let b:ale_fixers = ['ruff']
 
+" Ruff options
+let g:ale_python_ruff_options = '--select ALL'
+
 " Configure ALE to run automatically
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
